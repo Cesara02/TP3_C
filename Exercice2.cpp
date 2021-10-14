@@ -1,5 +1,4 @@
 #define _CRT_SECURE_NO_WARNINGS
-#define BUFFER_SIZE 1024
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
@@ -7,17 +6,20 @@
 
 int main()	{
 
-	char lettre[BUFFER_SIZE];
-	char chaine[BUFFER_SIZE];
-	int position = 0;
+	// Variables
+	char chaine[100];
+	char lettre;
+	int i, position = 0;
 
+	// Requête 
 	printf("Ecrivez une chaine des caractere: ");
-	fgets(chaine, BUFFER_SIZE, stdin);
-	printf("Ecrivez une lettre a retrouver: ");
-	fgets(lettre, BUFFER_SIZE, stdin);
+	gets_s(chaine);
 
-	if (lettre != chaine) {
-		position = position + 1;
+	printf("Ecrivez une lettre a retrouver: ");
+	gets_s(lettre);
+
+	while (lettre != chaine) do {
+		position++;
 	}
 
 	printf("Le caractere %c se trouve a la %d position.", lettre, position);
@@ -34,3 +36,4 @@ rechercher est le ‘a’
 Le résultat attendu à l’écran est le suivant :
 « Le caractère a se trouve à la position 4 à partir de la droite »
 */
+
