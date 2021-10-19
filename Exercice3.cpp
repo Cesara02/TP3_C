@@ -22,7 +22,7 @@ int main()
 	for (PCH = CH; *PCH; PCH++)
 	{
 		if (*PCH >= 'A' && *PCH <= 'Z')
-			(*(ABC + (*PCH - 'A')))++; /* Attention aux parenthèses! */
+			(*(ABC + (*PCH - 'A')))++;
 		if (*PCH >= 'a' && *PCH <= 'z')
 			(*(ABC + (*PCH - 'a')))++;
 	}
@@ -40,5 +40,6 @@ int main()
 
 /* Ecrire un programme qui saisit une chaîne de caractères au clavier et qui compte le
 nombre de fois que chacune des lettres de l’alphabet et le nombre d’espaces ont été
-présents dans la phrase.*/
+présents dans la phrase.
+*/
 	
